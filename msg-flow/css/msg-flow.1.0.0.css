@@ -1,0 +1,33 @@
+.mess:hover {
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	/* Safari 和 Chrome */
+}
+
+.mess {
+	animation-iteration-count: 3;
+	-webkit-animation-iteration-count: 3;
+	/*Safari 和 Chrome */
+}
+
+.def_msg {
+	padding: 0 15px;
+	line-height: 30px;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.left_img {
+	border-radius: 15px;
+	position: absolute;
+	left: -20px;
+	top: 0px;
+	/*弹窗 图片宽度*/
+	width: 30px;
+	/*弹窗 图片高度*/
+	height: 30px;
+}
+.mtxt{
+	/*弹窗 字体颜色*/
+	color:#333;
+}

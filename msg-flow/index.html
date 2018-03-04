@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="text/javascript" http-equiv="Content-Script-Type">
+		<meta content="text/css" http-equiv="Content-Style-Type">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<!--基础样式文件-->
+		<link rel="stylesheet" href="css/msg-flow.1.0.0.css" />
+		<title></title>
+	</head>
+	<body style="overflow-x: hidden;"> 
+		<!--放置 弹幕 html element 容器-->
+		<div id="messbox" >
+						
+		</div>
+		<!--测试 依赖数据-->
+		<script type="text/javascript" src="js/data.js" ></script>
+		<!--依赖 jquery-->
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--base core js-->
+		<script type="text/javascript" src="js/msg-flow.1.0.0.js" ></script>
+		<script>
+		//弹窗个数
+			var iTab=50;
+				for (var i=0;i<mess.length&&iTab>0;i++,iTab--) {
+					var txt=mess[parseInt(mess.length*Math.random(),10)].text;
+					var color=colors[parseInt(colors.length*Math.random(),10)];
+					var top222= Math.floor(window.innerHeight *Math.random()*0.8);
+					var src = "img/mmotiy.png";
+					var data={};
+					data.src=src;
+					data.bcolor=color;
+					data.top=top222;
+					data.text=txt;
+					$("#messbox").append($mess.generateMess(data));
+				}
+				//初始化
+				//$mess.init() 
+				//$mess.show()
+				//展示
+				
+				$mess.init(true)//将会直接掉哟个 show 方法 
+			
+		</script>
+	</body>
+</html>
